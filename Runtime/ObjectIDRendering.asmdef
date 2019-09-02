@@ -1,0 +1,14 @@
+{
+    "name": "ObjectIDRendering",
+    "references": [
+        "GUID:a1f2a1ae20746f947b43a9e2da5b01fc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}

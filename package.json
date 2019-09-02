@@ -1,0 +1,13 @@
+{
+  "displayName": "ObjectID Rendering",
+  "name": "com.unity.objectid-rendering",
+  "unity": "2019.2",
+  "version": "0.0.0-preview",
+  "dependencies": {},
+  "description": "Provides scripts for object id mask rendering in the classic pipeline.",
+  "author": "Simon Wittber <simonwittber@unity3d.com> (https://github.com/smnwttbr)",
+  "contributors": [
+    "Simon Wittber <simonwittber@unity3d.com> (https://github.com/smnwttbr)"
+  ]        
+  
+}
