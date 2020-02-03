@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
-using Unity.SelectionGroups;
+using Unity.SelectionGroups.Runtime;
 
 namespace Unity.ObjectIdRendering
 {
@@ -23,16 +23,12 @@ namespace Unity.ObjectIdRendering
         {
             var unselectedRenderers = new HashSet<Renderer>(FindObjectsOfType<Renderer>());
             var selectedRenderers = new HashSet<Renderer>();
-            foreach (var selectionGroup in SelectionGroupUtility.GetGroupNames())
+            foreach (var group in SelectionGroupContainer.Groups)
             {
-                var group = SelectionGroupUtility.GetFirstGroup(selectionGroup);
-                foreach (var i in SelectionGroupUtility.GetGameObjects(selectionGroup))
+                foreach (var r in group.GetMemberComponents<Renderer>())
                 {
-                    foreach (var r in ((GameObject)i).GetComponents<Renderer>())
-                    {
-                        selectedRenderers.Add(r);
-                        AddPropertyBlock(r, group.color);
-                    }
+                    selectedRenderers.Add(r);
+                    AddPropertyBlock(r, group.color);
                 }
             }
             unselectedRenderers.ExceptWith(selectedRenderers);
