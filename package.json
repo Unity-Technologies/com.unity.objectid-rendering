@@ -2,7 +2,7 @@
   "displayName": "ObjectID Rendering",
   "name": "com.unity.objectid-rendering",
   "unity": "2019.2",
-  "version": "0.0.0-preview",
+  "version": "0.0.1-dev",
   "dependencies": {
     "com.unity.selection-groups": "0.0.4-dev"
   },
